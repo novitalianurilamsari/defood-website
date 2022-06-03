@@ -1,0 +1,266 @@
+/*===== GOOGLE FONTS =====*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+/*===== VARIABLES CSS =====*/
+:root {
+  --header-height: 3rem;
+
+  /*========== Colors ==========*/
+  --first-color: #069C54;
+  --title-color: #393939;
+  --text-color: #707070;
+  --text-color-light: #A6A6A6;
+  --body-color: #FBFEFD;
+
+  /*========== Font and typography ==========*/
+  --body-font: 'Poppins', sans-serif;
+  --biggest-font-size: 2.25rem;
+  --h2-font-size: 1.25rem;
+  --normal-font-size: .938rem;
+  --small-font-size: .813rem;
+  --smaller-font-size: .75rem;
+
+  /*========== Font weight ==========*/
+  --font-medium: 500;
+
+  /*========== Margenes ==========*/
+  --mb-1: .5rem;
+  --mb-2: 1rem;
+  --mb-3: 1.5rem;
+  --mb-5: 2.5rem;
+
+  /*========== z index ==========*/
+  --z-fixed: 100;
+}
+
+@media screen and (min-width: 768px){
+  :root{
+    --biggest-font-size: 4rem;
+    --h2-font-size: 1.5rem;
+    --normal-font-size: 1rem;
+    --small-font-size: .875rem;
+    --smaller-font-size: .813rem;
+  }
+}
+
+/*========== BASE ==========*/
+*,::before,::after{
+  box-sizing: border-box;
+}
+
+body{
+  margin: var(--header-height) 0 0 0;
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  background-color: var(--body-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+h2,p{
+  margin: 0;
+}
+
+
+a{
+  text-decoration: none;
+}
+
+img{
+  max-width: 100%;
+  height: auto;
+}
+
+/*========== CLASS CSS ==========*/
+.section{
+  padding: auto;
+}
+
+.section-title, .section-subtitle{
+  text-align: center;
+}
+
+.section-title{
+  color: var(--title-color);
+  margin-bottom: var(--mb-3);
+}
+
+.section-subtitle{
+  display: block;
+  color: var(--first-color);
+  font-weight: var(--font-medium);
+  margin-bottom: var(--mb-1);
+}
+
+/*========== LAYOUT ==========*/
+.bd-container{
+  max-width: 960px;
+  width: calc(100% - 2rem);
+  margin-left: var(--mb-2);
+  margin-right: var(--mb-2);
+}
+
+.bd-grid{
+  display: grid;
+  gap: 1.5rem;
+}
+
+.l-header{
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: var(--z-fixed);
+  background-color: var(--body-color);
+}
+
+/*========== NAV ==========*/
+.nav{
+  max-width: 1024px;
+  height: var(--header-height);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav_item{
+  margin: 0px;
+}
+
+.logo img {
+    width: auto;
+    height: 80px;
+    margin: auto;
+    padding: 30px auto;
+    float: left;
+}
+
+.nav_link{
+  transition: .3s;
+}
+
+.nav_link:hover{
+    text-decoration: underline;
+    padding: 10px 10px;
+    background: #98D79E;
+    border-radius: 20px;
+    text-decoration: none;
+}
+
+.nav_toggle{
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+a.btn-hijau {
+    background: #009A45;
+    border-radius: 20px;
+    margin-top: 20px;
+    padding: 10px 10px;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+a.btn-hijau:hover {
+    background: #98D79E;
+    text-decoration: none;
+}
+
+/* Show menu */
+.show-menu{
+  top: var(--header-height);
+}
+
+/* Active menu */
+.active-link{
+  color: var(--first-color);
+}
+
+/*========== APP ==========*/
+.app_data{
+  text-align: center;
+  margin: 50px 50px;
+}
+
+.app_description{
+  margin-bottom: auto;
+}
+
+.app_stores{
+  margin: 20px auto;
+}
+
+.app_store{
+  width: 120px;
+  margin: auto;
+}
+
+.app_img{
+  width: 230px;
+  justify-self: center;
+}
+
+.app_copy{
+  text-align: center;
+  font-size: var(--small-font-size);
+  color: var(--text-color-light);
+  margin-top: 50px;
+  margin-bottom: 5px;
+}
+
+/*========== MEDIA QUERIES ==========*/
+@media screen and (min-width: 576px){
+  .app_container{
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+  }
+
+  .app_data, .app_initial,
+
+  .app_img{
+    width: 380px;
+    order: -1;
+  }
+
+
+@media screen and (min-width: 768px){
+  body{
+    margin: 30px 0 0 0;
+  }
+
+  .section{
+    padding-top: 4rem;
+  }
+
+  .nav{
+    height: calc(var(--header-height) + 1.5rem); 
+  }
+
+  .nav_item{
+    margin-left: var(--mb-5);
+  }
+
+  .app_store{
+    margin: 0 var(--mb-1) 0 0;
+  }
+}
+
+@media screen and (min-width: 960px){
+  .bd-container{
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .app_container{
+    column-gap: 7rem;
+  }
+}
+
+/* For tall screens on mobiles y desktop*/
+@media screen and (min-height: 721px) {
+    .app_container {
+        height: 640px;
+    }
+}
+}

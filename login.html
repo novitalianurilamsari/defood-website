@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- ===== CSS ===== -->
+        <link rel="stylesheet" href="css/login.css">
+    
+        <!-- ===== BOX ICONS ===== -->
+        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+
+        <title>SignIN or SignUP DEFOD</title>
+    </head>
+
+    <body>
+    <!--========== HEADER ==========-->
+        <header class="l-header" id="header">
+        <nav class="nav bd-container">
+            <div class="logo"><img src="img/defood.png" alt="logo" /></div>
+            <div class="nav_item"><a href="index.html" class="btn-hijau">Kembali</a></div>
+        </nav>
+        </header>
+        
+        <main class="l-main">
+        <!--===== LOGIN =======-->
+        <section class="bd-container">
+            <div class="login">
+            <div class="login_content">
+                <div class="login_img">
+                    <img src="img/login.svg" alt="" >
+                </div>
+
+                <div class="login_forms">
+                        <form action="home.html" class="login_registre" method="get"  id="login-in" onsubmit=" return validasignin()">
+                        <h1 class="login_title">MASUK</h1>
+
+                        <div class="login_box">
+                            <i class='bx bx-user login_icon'></i>
+                            <input type="text" placeholder="Username" class="login_input" name="username">
+                        </div>
+    
+                        <div class="login_box">
+                            <i class='bx bx-lock-alt login_icon'></i>
+                            <input type="password" placeholder="Password" class="login_input" name="password">
+                        </div>
+
+                        <a href="#" class="login_forgot">Lupa password?</a>
+                        <input class="login_button" type="submit" value="MASUK">
+                        <div>
+                            <span class="login_account">Tidak Mempunyai Akun?</span>
+                            <span class="login_signin" id="sign-up">DAFTAR</span>
+                        </div>
+                    </form>
+
+                    
+                    <form action="home.html" class="login_create none" method="get" id="login-up" onsubmit=" return validasignup()">
+                        <h1 class="login_title">DAFTAR</h1>
+    
+                        <div class="login_box">
+                            <i class='bx bx-user login_icon'></i>
+                            <input type="text" placeholder="Username" class="login_input" name="username">
+                        </div>
+    
+                        <div class="login_box">
+                            <i class='bx bx-at login_icon'></i>
+                            <input type="text" placeholder="Email" class="login_input" name="email">
+                        </div>
+
+                        <div class="login_box">
+                            <i class='bx bx-lock-alt login_icon'></i>
+                            <input type="password" placeholder="Password" class="login_input" name="password">
+                        </div>
+
+                        <input class="login_button" type="submit" value="DAFTAR">
+
+                        <div>
+                            <span class="login_account">SUDAH MEMPUNYAI AKUN?</span>
+                            <span class="login_signup" id="sign-in">MASUK</span>
+                        </div>
+
+                        <div class="login_social">
+                            <a href="#" class="login_social-icon"><i class='bx bxl-facebook' ></i></a>
+                            <a href="#" class="login_social-icon"><i class='bx bxl-twitter' ></i></a>
+                            <a href="#" class="login_social-icon"><i class='bx bxl-google' ></i></a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="copy">
+            <p class="login_copy"> &#169; 2021 by 18111436_NovitaLiaNurilamSari_18TIFKCIDB. All right reserved</p> 
+        </div> 
+    </section>
+
+        <!--===== MAIN JS =====-->
+        <script src="js/login.js"></script>
+    </body>
+</html>
